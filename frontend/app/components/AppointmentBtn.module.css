@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-inline: calc(var(--h7) * 4);
+    padding-inline: calc(var(--h7) * 2);
 }
 
-.appointment_btn button {
+.appointment_btn {
     background-color: rgb(var(--brand-500));
     color: rgb(var(--brand-100));
     border: none;
@@ -17,7 +17,7 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.appointment_btn button:hover {
+.appointment_btn:hover {
     background-color: rgb(var(--brand-600));
     color: rgb(var(--brand-100));
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
@@ -26,6 +26,6 @@
 
 @media (min-width: 768px) {
     .appointment_btn {
-        padding-inline: 0;
+        margin-inline: 0;
     }
 }

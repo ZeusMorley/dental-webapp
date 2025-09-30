@@ -1,9 +1,16 @@
 import styles from "./AppointmentBtn.module.css";
 
-export function AppointmentBtn() {
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    className?: string;
+  };
+
+  export function AppointmentBtn({className, ...props }: Props) {
     return (
-        <div className={styles.appointment_btn}>
-            <button>Book Appointment</button>
-        </div>
+      <button
+        className={`${styles.appointment_btn} ${className ?? ""}`}
+        {...props}
+      >
+        Book appointment
+      </button>
     );
-}
+  }

@@ -33,10 +33,13 @@
 }
 
 .hamburger_menu {
+    display: inline-flex;
     position: absolute;
     align-items: center;
     right: calc(var(--h6) * 2);
     top: calc(var(--h5) * 2);
+    background-color: transparent;
+    border: none;
 }
 .icon {
     color: rgb(var(--brand-700));
@@ -44,12 +47,26 @@
     height: calc(var(--h6) * 2);
   }
 
+.icon:hover {
+    color: rgb(var(--brand-600));
+}
+
 .nav_group {
     display: none;
     flex-direction: row;
     margin-right: calc(var(--h6) * 3);
     margin-top:  var(--h7);
     gap: var(--h6);
+}
+
+.nav_group.open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    top: calc(var(--h1) * 2);
+    width: auto;
 }
 
 .nav_item {
@@ -61,6 +78,7 @@
     border: 2px solid rgb(var(--brand-600));
     border-radius: calc(var(--h7) / 1.5);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    width: auto;
 }
 
 .nav_item:hover {

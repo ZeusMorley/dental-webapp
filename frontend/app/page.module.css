@@ -57,6 +57,10 @@
   color: rgb(var(--brand-600));
 }
 
+.appointment_btn {
+  margin-inline: calc(var(--h7) * 4);
+}
+
 .image img {
   width: calc(var(--h3) * 10);
 }

@@ -17,7 +17,7 @@ export default function Home() {
               Gentle, professional care for lasting confidence.
             </div>
           </div>
-          <AppointmentBtn />
+          <AppointmentBtn className={styles.appointment_btn}/>
         </div>
 
         <div className={styles.right_content}>
