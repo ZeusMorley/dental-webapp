@@ -45,11 +45,12 @@ body {
 
 body {
   color: rgb(var(--brand-900));
-  background: rgb(var(--brand-100));
+  background: 
+    rgb(var(--brand-100));
   font-family: var(--font-lexend-deca), system-ui, sans-serif;
 
   /* For the background tile texture */
-  /* background-image: url("/TDS_logo_bw.svg"); */
+  background-image: url("/TDS_logo_bw.svg");
   background-size: 50px 50px;
   background-position: center;
   background-repeat: repeat;
