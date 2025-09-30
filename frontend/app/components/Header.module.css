@@ -54,11 +54,13 @@
 
 .nav_item {
     color: rgb(var(--brand-600));
+    background-color: rgb(var(--brand-100));
     font-size: var(--h7);
     font-weight: var(--ld-bd);
     padding: calc(var(--h7) / 1.5) calc(var(--h6) / 1.5);
     border: 2px solid rgb(var(--brand-600));
-    border-radius: var(--h7);
+    border-radius: calc(var(--h7) / 1.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
