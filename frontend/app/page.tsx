@@ -7,7 +7,22 @@ export default function Home() {
     <div className={styles.app}>
       <Header />
       <main className={styles.main}>
-        <h1>Hello World</h1>
+        <div className={styles.left_content}>
+          <div className={styles.welcome_text}>
+            <div className={styles.slogan_text}>
+              Because Every Smile Deserves a Toothful Touch
+            </div>
+            <div className={styles.supporting_text}>
+              Gentle, professional care for lasting confidence.
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.right_content}>
+          <div className={styles.image}>
+            <img src="/TDS_toothbrush_colored.svg" />
+          </div>
+        </div>
       </main>
     </div>
     
