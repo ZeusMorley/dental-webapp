@@ -41,7 +41,7 @@
   --h7: var(--fs-12);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   :root { /* Tablet Font Sizes */
     --h1: var(--fs-40);
     --h2: var(--fs-36);
