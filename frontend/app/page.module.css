@@ -5,6 +5,7 @@
   justify-content: flex-start;
   height: 100vh;
   width: 100vw;
+  margin: var(--h7) var(--h6);
 }
 
 @media (min-width: 1024px) {
