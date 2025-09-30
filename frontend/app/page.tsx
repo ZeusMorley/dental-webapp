@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 
 import { Header } from "./components/Header";
+import { AppointmentBtn } from "./components/AppointmentBtn";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
               Gentle, professional care for lasting confidence.
             </div>
           </div>
+          <AppointmentBtn />
         </div>
 
         <div className={styles.right_content}>

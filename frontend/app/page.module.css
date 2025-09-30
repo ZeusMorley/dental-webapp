@@ -22,11 +22,16 @@
 .left_content, .right_content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   min-width: 0;
   width: 100%;
   padding-inline: calc(var(--h7) * 2);
+  gap: calc(var(--h7) * 2);
+}
+
+.right_content {
+  align-items: center;
 }
 
 .welcome_text {
@@ -35,6 +40,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: 75%;
+  padding-inline: calc(var(--h7) * 4);
 }
 
 .slogan_text {
@@ -62,5 +68,6 @@
   }
   .welcome_text {
     width: 100%;
+    padding-inline: 0;
   }
 }

@@ -1,6 +1,7 @@
 import styles from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { AppointmentBtn } from "./AppointmentBtn";
 
 export function Header() {
     return (
@@ -18,7 +19,7 @@ export function Header() {
             <div className={styles.nav_group}>
                 <div className={styles.nav_item}>About</div>
                 <div className={styles.nav_item}>Contact</div>
-                <div className={styles.nav_item}>Book Appointment</div>
+                <AppointmentBtn />
             </div>
         </header>
     );
