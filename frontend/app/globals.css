@@ -1,14 +1,14 @@
 :root {
   /* Color Palette */
-  --brand-100: #D4EDF6;
-  --brand-200: #A8DEF1;
-  --brand-300: #77C9E6;
-  --brand-400: #46B4DC;
-  --brand-500: #2498C3;
-  --brand-600: #0882AE;
-  --brand-700: #086384;
-  --brand-800: #014159;
-  --brand-900: #002A3A;
+  --brand-100: 212 237 246;
+  --brand-200: 168 222 241;
+  --brand-300: 119 201 230;
+  --brand-400: 70 180 220;
+  --brand-500: 36 152 195;
+  --brand-600: 8 130 174;
+  --brand-700: 8 99 132;
+  --brand-800: 1 65 89;
+  --brand-900: 0 42 58;
 
   /* Font Sizes */
   --fs-12: 0.75rem;
@@ -44,7 +44,13 @@ body {
 }
 
 body {
-  color: var(--brand-900);
-  background: var(--brand-100);
+  color: rgb(var(--brand-900));
+  background: rgb(var(--brand-100));
   font-family: var(--font-lexend-deca), system-ui, sans-serif;
+
+  /* For the background tile texture */
+  /* background-image: url("/TDS_logo_bw.svg"); */
+  background-size: 50px 50px;
+  background-position: center;
+  background-repeat: repeat;
 }
