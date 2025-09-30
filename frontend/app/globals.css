@@ -20,11 +20,6 @@
   --fs-36: 2.25rem;
   --fs-40: 2.5rem;
   --fs-44: 2.75rem;
-  --fs-48: 3rem;
-  --fs-52: 3.25rem;
-  --fs-56: 3.5rem;
-  --fs-60: 3.75rem;
-  --fs-64: 4rem;
 
   /* Lexend Deca weights */
   --ld-md: 500;  /* medium */
@@ -35,6 +30,39 @@
   --ol-rg: 400;  /* regular */
   --ol-bd: 700;  /* bold */
   --ol-bk: 900;  /* black */
+
+  /* Mobile/Default Font Sizes */
+  --h1: var(--fs-36);
+  --h2: var(--fs-32);
+  --h3: var(--fs-28);
+  --h4: var(--fs-24);
+  --h5: var(--fs-20);
+  --h6: var(--fs-16);
+  --h7: var(--fs-12);
+}
+
+@media (min-width: 1024px) {
+  :root { /* Tablet Font Sizes */
+    --h1: var(--fs-40);
+    --h2: var(--fs-36);
+    --h3: var(--fs-32);
+    --h4: var(--fs-28);
+    --h5: var(--fs-24);
+    --h6: var(--fs-20);
+    --h7: var(--fs-16);
+  }
+}
+
+@media (min-width: 1440px) {
+  :root { /* Desktop Font Sizes */
+    --h1: var(--fs-44);
+    --h2: var(--fs-40);
+    --h3: var(--fs-36);
+    --h4: var(--fs-32);
+    --h5: var(--fs-28);
+    --h6: var(--fs-24);
+    --h7: var(--fs-20);
+  }
 }
 
 html,
@@ -55,3 +83,5 @@ body {
   background-position: center;
   background-repeat: repeat;
 }
+
+
