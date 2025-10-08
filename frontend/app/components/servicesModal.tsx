@@ -53,10 +53,10 @@ export function ServicesModalContent() {
     );
   };
 
-  // Placeholder totals (will be calculated by backend)
-  const subtotal = 37500;
-  const vat = 4500;
-  const total = 42000;
+  const hasSelections = services.some(s => // check if there are any services availed
+    (s.type === 'counter' && (s.count || 0) > 0) ||
+    (s.type === 'toggle' && s.enabled)
+  );
 
   return (
     <div className={styles.modal_container}>
@@ -84,23 +84,11 @@ export function ServicesModalContent() {
         ))}
       </div>
 
-      <div className={styles.totals}>
-        <div className={styles.total_row}>
-          <span>Total (Before VAT)</span>
-          <span>₱{subtotal.toLocaleString()}</span>
-        </div>
-        <div className={styles.total_row}>
-          <span>VAT (+12%)</span>
-          <span>₱{vat.toLocaleString()}</span>
-        </div>
-        <div className={`${styles.total_row} ${styles.final}`}>
-          <span>Total (After VAT)</span>
-          <span>₱{total.toLocaleString()}</span>
-        </div>
-      </div>
-
-      <button className={styles.appointment_btn}>
-        Get appointment <FontAwesomeIcon icon={faCircleUp} className={styles.icon_arrow}/>
+      <button 
+        className={styles.appointment_btn}
+        disabled={!hasSelections}
+        >
+        Get Quote <FontAwesomeIcon icon={faCircleUp} className={styles.icon_arrow}/>
       </button>
     </div>
   );

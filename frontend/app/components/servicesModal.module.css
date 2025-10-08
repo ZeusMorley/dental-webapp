@@ -65,7 +65,7 @@
     background: rgb(var(--brand-600));
     color: rgb(var(--brand-100));
     border: none;
-    border-radius: 8px;
+    border-radius: 32px;
     margin: 0 var(--h5);
     padding: 12px 24px;
     font-size: var(--h7);
@@ -76,8 +76,13 @@
     width: auto;
   }
   
-  .appointment_btn:hover {
+  .appointment_btn:hover:not(:disabled) {
     background: rgb(var(--brand-700));
+  }
+  
+  .appointment_btn:disabled {
+    background: rgb(var(--brand-300));
+    cursor: not-allowed;
   }
 
   .icon_arrow {
