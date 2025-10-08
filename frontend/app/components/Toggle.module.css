@@ -1,0 +1,30 @@
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 36px;
+  border-radius: 32px;
+  border: 2px solid rgb(var(--brand-600));
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toggle.checked {
+  background: rgb(var(--brand-600));
+}
+
+.thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgb(var(--brand-700));
+  transition: transform 0.2s;
+}
+
+.toggle.checked .thumb {
+  transform: translateX(24px);
+  background: rgb(var(--brand-100));
+}

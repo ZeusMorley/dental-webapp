@@ -3,7 +3,8 @@ import styles from "./page.module.css";
 import { useState } from "react";
 import { Header } from "./components/Header";
 import { AppointmentBtn } from "./components/AppointmentBtn";
-import { ServicesModal, ServicesModalContent } from "./components/servicesModal";
+import { ServicesModal } from "./components/servicesModal";
+import { ServicesModalContent } from "./components/servicesModal";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);

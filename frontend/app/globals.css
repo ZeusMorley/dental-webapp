@@ -123,8 +123,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding-top: calc(var(--h1) * 2);
+  justify-content: center;
+  padding: var(--h7) 0;
   z-index: 1000;
 }
 
@@ -146,7 +146,7 @@ body {
   border-radius: 0.75rem;
   padding: 1.5rem;
 
-  width: clamp(300px, 70%, 700px);
+  width: clamp(300px, 60%, 480px);
   max-height: 90vh;
   overflow-y: auto;
 }
