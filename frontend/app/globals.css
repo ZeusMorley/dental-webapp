@@ -146,7 +146,7 @@ body {
   border-radius: 0.75rem;
   padding: 1.5rem;
 
-  width: clamp(300px, 60%, 480px);
+  width: auto;
   max-height: 90vh;
   overflow-y: auto;
 }

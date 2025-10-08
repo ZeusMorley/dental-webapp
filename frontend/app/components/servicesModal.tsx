@@ -38,9 +38,13 @@ export function ServicesModal({ isOpen, onClose, children }: Props) {
   );
 } 
 
-export function ServicesModalContent() {
-  const [services, setServices] = useState<Service[]>(SERVICES);
+type ServicesModalContentProps = {
+  services: Service[];
+  setServices: React.Dispatch<React.SetStateAction<Service[]>>;
+  onGetQuote: () => void;
+};
 
+export function ServicesModalContent({ services, setServices, onGetQuote }: ServicesModalContentProps) {
   const updateCounter = (id: string, count: number) => {
     setServices(prev =>
       prev.map(s => (s.id === id ? { ...s, count } : s))
@@ -53,7 +57,7 @@ export function ServicesModalContent() {
     );
   };
 
-  const hasSelections = services.some(s => // check if there are any services availed
+  const hasSelections = services.some(s => 
     (s.type === 'counter' && (s.count || 0) > 0) ||
     (s.type === 'toggle' && s.enabled)
   );
@@ -87,6 +91,7 @@ export function ServicesModalContent() {
       <button 
         className={styles.appointment_btn}
         disabled={!hasSelections}
+        onClick={onGetQuote}
         >
         Get Quote <FontAwesomeIcon icon={faCircleUp} className={styles.icon_arrow}/>
       </button>
