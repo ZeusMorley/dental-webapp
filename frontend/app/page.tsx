@@ -1,12 +1,17 @@
+"use client";
 import styles from "./page.module.css";
-
+import { useState } from "react";
 import { Header } from "./components/Header";
 import { AppointmentBtn } from "./components/AppointmentBtn";
+import { ServicesModal, ServicesModalContent } from "./components/servicesModal";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
+    <>
     <div className={styles.app}>
-      <Header />
+      <Header onOpenModal={() => setIsModalOpen(true)}/>
       <main className={styles.main}>
         <div className={styles.left_content}>
           <div className={styles.welcome_text}>
@@ -17,7 +22,7 @@ export default function Home() {
               Gentle, professional care for lasting confidence.
             </div>
           </div>
-          <AppointmentBtn className={styles.appointment_btn}/>
+          <AppointmentBtn onClick={() => setIsModalOpen(true)} className={styles.appointment_btn}/>
         </div>
 
         <div className={styles.right_content}>
@@ -28,5 +33,9 @@ export default function Home() {
       </main>
     </div>
     
+    <ServicesModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      <ServicesModalContent />
+    </ServicesModal>
+    </>
   );
 }

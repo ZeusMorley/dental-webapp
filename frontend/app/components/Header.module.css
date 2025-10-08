@@ -43,8 +43,8 @@
 }
 .icon {
     color: rgb(var(--brand-700));
-    width: calc(var(--h6) * 2);
-    height: calc(var(--h6) * 2);
+    width: 28px;
+    height: 28px;
   }
 
 .icon:hover {

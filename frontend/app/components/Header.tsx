@@ -5,7 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { AppointmentBtn } from "./AppointmentBtn";
 
-export function Header() {
+type HeaderProps = {
+    onOpenModal: () => void;
+  };
+  
+  export function Header({ onOpenModal }: HeaderProps) {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
@@ -41,7 +45,7 @@ export function Header() {
             <nav id="mobile-nav" className={`${styles.nav_group} ${open ? styles.open : ""}`}>
                 <div className={styles.nav_item}>About</div>
                 <div className={styles.nav_item}>Contact</div>
-                <AppointmentBtn />
+                <AppointmentBtn onClick={onOpenModal}/>
             </nav>
         </header>
     );
